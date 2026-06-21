@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcademyContable - Domina la Contabilidad desde Cero</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1a237e; /* Azul profundo */
+            --secondary: #00c853; /* Verde éxito */
+            --accent: #ffab00; /* Naranja vibrante */
+            --light: #f4f7f6;
+            --dark: #333;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 5%;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 35, 126, 0.8), rgba(26, 35, 126, 0.8)), url('https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80') center/cover;
+            color: white;
+            padding: 100px 10%;
+            text-align: center;
+        }
+
+        .hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .btn-main {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            transition: 0.3s;
+        }
+        .btn-main:hover { background: white; }
+
+        /* Sections */
+        section { padding: 80px 10%; }
+        h2 { text-align: center; color: var(--primary); font-size: 2rem; margin-bottom: 40px; }
+
+        /* Tarjetas de Curso */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-bottom: 5px solid var(--secondary);
+        }
+
+        /* Formulario Optimizado */
+        .contact-container {
+            background: white;
+            max-width: 550px;
+            margin: 0 auto;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+
+        .form-group { 
+            margin-bottom: 22px; 
+            text-align: left;
+        }
+
+        label { 
+            display: block; 
+            margin-bottom: 8px; 
+            font-weight: bold; 
+            color: var(--dark);
+            font-size: 0.95rem;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background-color: #fbfbfb;
+        }
+
+        /* Efecto al hacer clic en los campos */
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            background-color: #fff;
+            box-shadow: 0 0 0 4px rgba(26, 35, 126, 0.1);
+        }
+
+        /* Botón Corregido */
+        button[type="submit"] {
+            background: var(--secondary);
+            color: white;
+            border: none;
+            padding: 16px 20px;
+            width: 100%;
+            font-size: 1.1rem;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 200, 83, 0.3);
+        }
+
+        button[type="submit"]:hover {
+            background: #00a844;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 200, 83, 0.4);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .contact-container { padding: 30px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav><strong>AcademyContable</strong></nav>
+    </header>
+
+    <section class="hero">
+        <h1>Aprende Contabilidad desde Cero</h1>
+        <p>Conviértete en un experto manejando finanzas, impuestos y software contable con nuestro método progresivo.</p>
+        <br><br>
+        <a href="#contacto" class="btn-main">¡Inscribirme Ahora!</a>
+    </section>
+
+    <section id="cursos">
+        <h2>¿Qué vas a aprender?</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>1. Fundamentos</h3>
+                <p>Principios básicos, marco legal y ética profesional para iniciar con bases sólidas.</p>
+            </div>
+            <div class="card">
+                <h3>2. Ciclo Contable</h3>
+                <p>Teoría de la partida doble, libros diarios, mayor y asientos contables prácticos.</p>
+            </div>
+            <div class="card">
+                <h3>3. Estados Financieros</h3>
+                <p>Aprende a leer y crear Balances Generales y Estados de Resultados.</p>
+            </div>
+            <div class="card">
+                <h3>4. Fiscal y Costos</h3>
+                <p>Impuestos básicos, normativa vigente y control de costes operativos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #e3f2fd;">
+        <h2>Tecnología de Vanguardia</h2>
+        <div class="grid">
+            <div class="card" style="border-bottom-color: var(--accent);">
+                <h3>Software Pro</h3>
+                <p>Prácticas en <strong>QuickBooks, CONTPAQi y Aspel</strong>.</p>
+            </div>
+            <div class="card" style="border-bottom-color: var(--accent);">
+                <h3>Excel Financiero</h3>
+                <p>Plantillas avanzadas y tutoriales paso a paso.</p>
+            </div>
+            <div class="card" style="border-bottom-color: var(--accent);">
+                <h3>Multimedia</h3>
+                <p>Simulaciones financieras y videotutoriales en HD.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Beneficios de nuestra plataforma</h2>
+        <ul style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+            <li>✅ <strong>Interfaz Intuitiva:</strong> Aprende desde tu celular o computadora.</li>
+            <li>✅ <strong>Certificación:</strong> Diploma con validez oficial al finalizar.</li>
+            <li>✅ <strong>Tutoría Humana:</strong> Foros y chat directo con contadores expertos.</li>
+            <li>✅ <strong>Blog Fiscal:</strong> Actualizaciones constantes sobre leyes tributarias.</li>
+        </ul>
+    </section>
+
+    <section id="contacto" style="background: var(--primary); color: white;">
+        <h2 style="color: white;">Empieza hoy mismo</h2>
+        <div class="contact-container">
+            <form action="https://formspree.io/f/xwvdejjg" method="POST">
+                <div class="form-group">
+                    <label>Nombre Completo</label>
+                    <input type="text" name="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label>Correo Electrónico</label>
+                    <input type="email" name="email" placeholder="juan@ejemplo.com" required>
+                </div>
+                <div class="form-group">
+                    <label>¿Qué tema te interesa más?</label>
+                    <select name="interes">
+                        <option value="Contabilidad Básica">Contabilidad Básica</option>
+                        <option value="Software Contable">Software Contable</option>
+                        <option value="Impuestos y Fiscal">Impuestos y Fiscal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" rows="4" placeholder="Cuéntanos tus dudas..."></textarea>
+                </div>
+                <button type="submit">Enviar Información</button>
+            </form>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 20px; background: #222; color: #fff;">
+        <p>&copy; 2026 AcademyContable - Tu éxito financiero empieza aquí.</p>
+    </footer>
+
+</body>
+</html>
